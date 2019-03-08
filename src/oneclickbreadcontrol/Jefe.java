@@ -5,13 +5,17 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Andres
  */
-public class Jefe extends Persona{
+public class Jefe extends Persona implements Serializable{
+    Panaderia ChiomaBakery;
+  
     
-  public void contratar(Empleado emp, int salario){
+    public void contratar(Empleado emp, int salario){
       
   }
   public void despedir(int id){

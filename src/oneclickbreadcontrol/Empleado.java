@@ -5,10 +5,16 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Andres
  */
-public class Empleado extends Persona{
+public class Empleado extends Persona implements Serializable{
     private int salario;
+    
+    
+    
+    
 }

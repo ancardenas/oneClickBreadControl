@@ -9,7 +9,7 @@ package oneclickbreadcontrol;
  *
  * @author Andres
  */
-public class Proveedore {
+public class Proveedor {
     private String nombre;
     private int telefono;
     private MatPrima matPrima;

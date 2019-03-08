@@ -11,7 +11,7 @@ package oneclickbreadcontrol;
  */
 public class Persona {
     private String nombre;
-    private int id;
+    private int ID;
     private String ususario;
     private String contrasena;
             

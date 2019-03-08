@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class PedidoRecomendado {
     private ArrayList<MatPrima> matPrimas;
-    private ArrayList<Proveedore> proveedores;
+    private ArrayList<Proveedor> proveedores;
     private ArrayList<Venta> ventas;
     
 }

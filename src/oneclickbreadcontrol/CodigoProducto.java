@@ -5,16 +5,11 @@
  */
 package oneclickbreadcontrol;
 
-import java.util.HashMap;
-
 /**
  *
- * @author Andres
+ * @author Horacio
  */
-public class Inventario {
-    private int dia;
-    private int mes;
-    private int anno;
-    private HashMap <String,Producto> productos=new HashMap<>();
-   
+public class CodigoProducto {
+    private String referencia;
+    private String descripcion;
 }

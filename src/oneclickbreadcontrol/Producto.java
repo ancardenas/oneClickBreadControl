@@ -11,6 +11,6 @@ package oneclickbreadcontrol;
  */
 public class Producto {
     private String nombre;
-    private int cod;
-    private int precio;
+    private String ID;
+    private CodigoProducto precio;
 }
