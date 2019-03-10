@@ -12,5 +12,5 @@ package oneclickbreadcontrol;
 public class MatPrima extends Producto{
     private int cantidad;
     private String unidades;
-    private Proveedore proveedor;
+    private Proveedor proveedor;
 }

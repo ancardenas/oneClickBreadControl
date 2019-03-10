@@ -10,9 +10,51 @@ package oneclickbreadcontrol;
  * @author Andres
  */
 public class Persona {
+    
     private String nombre;
-    private int ID;
+    private String ID;
     private String ususario;
     private String contrasena;
+
+    public Persona(String nombre, String ID, String ususario, String contrasena) {
+        this.nombre = nombre;
+        this.ID = ID;
+        this.ususario = ususario;
+        this.contrasena = contrasena;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public String getUsusario() {
+        return ususario;
+    }
+
+    public void setUsusario(String ususario) {
+        this.ususario = ususario;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
             
+    
+    
 }

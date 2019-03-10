@@ -20,14 +20,24 @@ public class Panaderia {
  private ArrayList<Caja> cajasdiarias=new ArrayList();
 private ArrayList<Empleado> empleados=new ArrayList(); 
 
+    public Panaderia(String nombre, String direccion, int Telefono) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.Telefono = Telefono;
+    }
+
    
 
-
-
-
-
-
-
+public boolean ingresar(String username,String contrasena){
+    
+    for (int i = 0; i <this.empleados.size(); i++) {
+        if(this.empleados.get(i).getUsusario().equals(username)&&
+                this.empleados.get(i).getContrasena().equals(contrasena)){
+             return true;
+        }
+    }
+    return false;
+}
 
 
 
