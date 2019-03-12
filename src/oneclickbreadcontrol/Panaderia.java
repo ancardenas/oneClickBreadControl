@@ -12,15 +12,18 @@ public class Panaderia {
  private String nombre;//Chioma Bakery
  private String direccion;//crr 51#134-90
  private int Telefono;//3043513484
- private ArrayList<Caja> cajasmensuales=new ArrayList();
- private ArrayList<Caja> cajasdiarias=new ArrayList();
-private ArrayList<Empleado> empleados=new ArrayList(); 
+ private ArrayList<Caja> cajasmensuales;
+ private ArrayList<Caja> cajasdiarias;
+private ArrayList<Empleado> empleados; 
 
 
     public Panaderia(String nombre, String direccion, int Telefono) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.Telefono = Telefono;
+        this.empleados =new ArrayList<>();
+        this.cajasdiarias = new ArrayList<>();
+        this.cajasmensuales =new ArrayList<>();
     }
 
    
@@ -45,8 +48,7 @@ private ArrayList<Empleado> empleados=new ArrayList();
 public boolean ingresar(String username,String contrasena){
     
     for (int i = 0; i <this.empleados.size(); i++) {
-        if(this.empleados.get(i).getUsusario().equals(username)&&
-                this.empleados.get(i).getContrasena().equals(contrasena)){
+        if(this.empleados.get(i).getUsusario().equals(username)){
              return true;
         }
     }
@@ -91,9 +93,7 @@ public Inventario getInv() {
         return empleados;
     }
 
-    public void setEmpleados(ArrayList<Empleado> empleados) {
-        this.empleados = empleados;
-    }
+    
 
     public ArrayList<Caja> getCajasmensuales() {
         return cajasmensuales;
