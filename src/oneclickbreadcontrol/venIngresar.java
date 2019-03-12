@@ -38,7 +38,6 @@ public class venIngresar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("OneClickbreadControl");
-        setExtendedState(6);
 
         jLabel1.setText("Nombre Usuario:");
 
@@ -109,9 +108,12 @@ public class venIngresar extends javax.swing.JFrame {
 
     private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
 
-    boolean ingresar=jefe.getChiomaBakery().ingresar(this.txtnombreusuario.getText(),this.txtcontrasena.getText()); 
+    
      //busca el texto que esuario regsistro y sugun ello busca si es un empleado
-    if(ingresar){
+    if(jefe.ingresar(this.txtcontrasena.getText(), this.txtnombreusuario.getText())){
+        venMenuPrincipal men = new venMenuPrincipal();
+        men.show();
+        this.dispose();
         // aqui se debe crear una ventana de la pagina principal de la plataforma y mostrarla.
         
     }

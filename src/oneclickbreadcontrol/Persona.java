@@ -11,10 +11,10 @@ package oneclickbreadcontrol;
  */
 public class Persona {
     
-    private String nombre;
-    private String ID;
-    private String ususario;
-    private String contrasena;
+    protected String nombre;
+    protected String ID;
+    protected String ususario;
+    protected String contrasena;
 
     public Persona(String nombre, String ID, String ususario, String contrasena) {
         this.nombre = nombre;

@@ -5,6 +5,8 @@
  */
 package oneclickbreadcontrol;
 
+import com.sun.org.apache.bcel.internal.generic.AALOAD;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Level;
@@ -127,6 +129,7 @@ public class venMenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MenuPrincipal");
+        setExtendedState(6);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\pan64.png")); // NOI18N
@@ -148,6 +151,11 @@ public class venMenuPrincipal extends javax.swing.JFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Logout32.png")); // NOI18N
         jButton1.setText("Cerrar sesion");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jMenuBar2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -324,6 +332,23 @@ public class venMenuPrincipal extends javax.swing.JFrame {
         this.Desktop.add(inf);
         inf.show();
     }//GEN-LAST:event_InfMen1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        GestionDeArchivos gestion;
+        try {
+            gestion = new GestionDeArchivos();
+            Panaderia panaderia=new Panaderia("ChiomaBakery","bogota",311670);
+        Jefe jefe=new Jefe(panaderia,"velentine",gestion,"desarrolladores","1520","deserrolladores","1520");
+        venIngresar ing = new venIngresar(jefe);
+        ing.show();
+        this.dispose();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(venMenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

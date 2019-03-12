@@ -7,6 +7,8 @@ package oneclickbreadcontrol;
 
 import java.io.Serializable;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -119,6 +121,15 @@ public class Jefe extends Persona implements Serializable{
        
        return null;
    }
+   public boolean ingresar(String contrasena,String name){
+       if (this.ususario.equals(name)&&this.contrasena.equals(contrasena)){
+           return true;
+       }else{
+           return this.ChiomaBakery.ingresar(name, contrasena);
+       }
+   }
+
+    
 
 
 
