@@ -12,5 +12,81 @@ package oneclickbreadcontrol;
 public class Producto {
     private String nombre;
     private String ID;
-    private CodigoProducto precio;
+    private double precio;
+    private int catidad;
+    private String unidades;
+    private String descripcion;
+    private Provedor provedor;
+    
+
+    public Producto(String nombre, String ID, double precio, int catidad, String unidades) {
+        this.nombre = nombre;
+        this.ID = ID;
+        this.precio = precio;
+        this.catidad = catidad;
+        this.unidades = unidades;
+    }
+
+    public Producto(String nombre, String ID, double precio, int catidad, String unidades, String descripcion) {
+        this.nombre = nombre;
+        this.ID = ID;
+        this.precio = precio;
+        this.catidad = catidad;
+        this.unidades = unidades;
+        this.descripcion = descripcion;
+    }
+
+    public Producto(String nombre, String ID, double precio, int catidad, String unidades, Provedor provedor) {
+        this.nombre = nombre;
+        this.ID = ID;
+        this.precio = precio;
+        this.catidad = catidad;
+        this.unidades = unidades;
+        this.provedor = provedor;
+    }
+    
+    
+    
+    
+    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+   
+
+    public int getCatidad() {
+        return catidad;
+    }
+
+    public void setCatidad(int catidad) {
+        this.catidad = catidad;
+    }
+
+    public String getUnidades() {
+        return unidades;
+    }
+
+    public void setUnidades(String unidades) {
+        this.unidades = unidades;
+    }
+    
+    
+    
+    
+    
+    
 }

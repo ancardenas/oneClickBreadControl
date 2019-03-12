@@ -5,6 +5,8 @@
  */
 package oneclickbreadcontrol;
 
+import java.util.Calendar;
+
 /**
  *
  * @author Andres
@@ -17,4 +19,8 @@ public class Venta {
     private int anno;
     private int hora;
     
+    public Venta HacerVenta(Empleado e,Caja c,Inventario i,Calendar cal){
+        return null;
+        
+    }
 }

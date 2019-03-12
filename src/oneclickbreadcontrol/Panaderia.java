@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package oneclickbreadcontrol;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -13,12 +9,13 @@ import java.util.ArrayList;
  */
 public class Panaderia {
  private Inventario inv= new Inventario();
- private String nombre;
- private String direccion;
- private int Telefono;
+ private String nombre;//Chioma Bakery
+ private String direccion;//crr 51#134-90
+ private int Telefono;//3043513484
  private ArrayList<Caja> cajasmensuales=new ArrayList();
  private ArrayList<Caja> cajasdiarias=new ArrayList();
 private ArrayList<Empleado> empleados=new ArrayList(); 
+
 
     public Panaderia(String nombre, String direccion, int Telefono) {
         this.nombre = nombre;
@@ -27,6 +24,23 @@ private ArrayList<Empleado> empleados=new ArrayList();
     }
 
    
+
+   public ArrayList<Caja> CrearCajaMensual(int dia,int mes,int Anno,int hora){
+      Caja asignacion=new Caja(dia, mes, Anno, hora);
+       for (Caja aux : cajasdiarias) {
+           if(aux.getAnno()==Anno){
+               if(aux.getMes()==mes){
+                   if(aux.getDia()<=dia){
+                       asignacion.getVentas().addAll(asignacion.getVentas().size(),aux.getVentas());
+                   }
+               }
+           }
+       }
+   if(asignacion.getVentas().size()>0){
+       this.cajasmensuales.add(asignacion);}
+   return cajasmensuales;
+           }
+
 
 public boolean ingresar(String username,String contrasena){
     
@@ -38,13 +52,6 @@ public boolean ingresar(String username,String contrasena){
     }
     return false;
 }
-
-
-
-
-
-
-
 
 public Inventario getInv() {
         return inv;
@@ -103,7 +110,68 @@ public Inventario getInv() {
     public void setCajasdiarias(ArrayList<Caja> cajasdiarias) {
         this.cajasdiarias = cajasdiarias;
     }
+   
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+   
     
     
     

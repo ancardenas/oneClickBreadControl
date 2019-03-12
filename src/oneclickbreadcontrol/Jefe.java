@@ -46,6 +46,14 @@ public class Jefe extends Persona implements Serializable{
     public void setCodigoseguriadad(String codigoseguriadad) {
         this.codigoseguriadad = codigoseguriadad;
     }
+
+    public GestionDeArchivos getGestion() {
+        return gestion;
+    }
+
+    public void setGestion(GestionDeArchivos gestion) {
+        this.gestion = gestion;
+    }
    
    
    

@@ -9,15 +9,8 @@ package oneclickbreadcontrol;
  *
  * @author Andres
  */
-public class MatPrima extends Producto{
-
-    public MatPrima(String nombre, String ID, double precio, int catidad, String unidades) {
-        super(nombre, ID, precio, catidad, unidades);
-    }
-
-   
-   
-    
-    
-    
+public class Provedor {
+    private String nombre;
+    private int telefono;
+    private MatPrima matPrima;
 }
