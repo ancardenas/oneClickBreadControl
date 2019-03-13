@@ -5,13 +5,14 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
 /**
  *
  * @author Andres
  */
-public class Venta {
+public class Venta implements Serializable {
     private int iva;
     private int total;
     private int dia;

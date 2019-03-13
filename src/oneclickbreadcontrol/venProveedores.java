@@ -35,7 +35,7 @@ public class venProveedores extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
         setTitle("Proveedores");
-        setFrameIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Proveedores24.png")); // NOI18N
+        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/oneclickbreadcontrol/Images/Proveedores24.png"))); // NOI18N
         setName("Proveedores"); // NOI18N
 
         proveedores.setModel(new javax.swing.table.DefaultTableModel(

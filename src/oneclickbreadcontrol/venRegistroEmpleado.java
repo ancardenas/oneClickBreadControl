@@ -193,7 +193,7 @@ public class venRegistroEmpleado extends javax.swing.JFrame {
 
     private void bntatrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntatrasActionPerformed
 
-    venIngresar ingresar=new venIngresar(jefe);
+    venIngresar ingresar=new venIngresar();
     ingresar.show();
     this.dispose();
 

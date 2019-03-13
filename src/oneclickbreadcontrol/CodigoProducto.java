@@ -5,11 +5,13 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Horacio
  */
-public class CodigoProducto {
+public class CodigoProducto implements Serializable {
     private String referencia;
     private String descripcion;
 }

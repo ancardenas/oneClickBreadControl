@@ -5,10 +5,12 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Andres
  */
-public class VentanaInventario {
+public class VentanaInventario implements Serializable{
     private Inventario inv;
 }

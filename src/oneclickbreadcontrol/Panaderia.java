@@ -1,5 +1,6 @@
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -7,14 +8,14 @@ import java.util.HashMap;
  *
  * @author Andres
  */
-public class Panaderia {
+public class Panaderia implements Serializable{
  private Inventario inv= new Inventario();
  private String nombre;//Chioma Bakery
  private String direccion;//crr 51#134-90
  private int Telefono;//3043513484
  private ArrayList<Caja> cajasmensuales;
  private ArrayList<Caja> cajasdiarias;
-private ArrayList<Empleado> empleados; 
+ private ArrayList<Empleado> empleados; 
 
 
     public Panaderia(String nombre, String direccion, int Telefono) {

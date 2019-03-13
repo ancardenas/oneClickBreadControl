@@ -5,11 +5,13 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Andres
  */
-public class MatPrima extends Producto{
+public class MatPrima extends Producto implements Serializable{
 
     public MatPrima(String nombre, String ID, double precio, int catidad, String unidades) {
         super(nombre, ID, precio, catidad, unidades);

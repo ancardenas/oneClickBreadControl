@@ -5,18 +5,20 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
 import javax.swing.JOptionPane;
+import static oneclickbreadcontrol.OneClickbreadControl.gestion;
 
 /**
  *
  * @author Andres
  */
-public class Inventario {
+public class Inventario implements Serializable {
     
     private ArrayList movimientos=new ArrayList();
      private Calendar calendario=new GregorianCalendar();
@@ -40,14 +42,14 @@ public class Inventario {
                    +this.Productosymaterias.get(i).getID()+" en la fecha "+calendario.getTime();
                this.movimientos.add(traza);       
            this.Productosymaterias.remove(i);                      // si la cantidad es igual a la pedida lo quita del inventario
-                    jefe.getGestion().guardartodo(jefe);
+                    gestion.guardartodo(jefe);
                  }else if (this.Productosymaterias.get(i).getCatidad()>catidad) {// revisas so la cantidad que se va a retirar  no excede la cantidad que hay
                  String traza="Se retiron "+this.Productosymaterias.get(i).getCatidad()+" "+this.Productosymaterias.get(i).getUnidades()+" de "+this.Productosymaterias.get(i).getNombre()+" con codigo deproducto "
                    +this.Productosymaterias.get(i).getID()+" en la fecha "+calendario.getTime();
                       this.movimientos.add(traza); 
                  int catidadp=this.Productosymaterias.get(i).getCatidad();          // si es menor la que piden entonces quita la cantidad del inventario.
                         this.Productosymaterias.get(i).setCatidad(catidadp-catidad);
-               jefe.getGestion().guardartodo(jefe);
+               gestion.guardartodo(jefe);
                  }else{
                     JOptionPane.showMessageDialog(null,"No existe la cantidad solicitada, por favor agrege mas elementos","error",JOptionPane.ERROR_MESSAGE);
                    
@@ -78,7 +80,7 @@ public class Inventario {
              if (existencia) {
              int cantidadp= this.Productosymaterias.get(posicion).getCatidad();
               this.Productosymaterias.get(posicion).setCatidad(cantidad+cantidadp);
-              jefe.getGestion().guardartodo(jefe);
+              gestion.guardartodo(jefe);
               
           }else{
               // se a crear un objeto tipo producto con el fin de igresar toda su informacion
@@ -91,7 +93,7 @@ public class Inventario {
          
          this.movimientos.add(traza);
          // se guardan los cambios que se hicieron en el inventario
-         jefe.getGestion().guardartodo(jefe);
+         gestion.guardartodo(jefe);
           }
          
         

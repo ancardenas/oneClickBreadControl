@@ -5,14 +5,17 @@
  */
 package oneclickbreadcontrol;
 
-import java.io.Serializable;
-
 /**
  *
- * @author Andres
+ * @author Juan-Jesus
  */
-public class Proveedor implements Serializable{
-    private String nombre;
-    private int telefono;
-    private MatPrima matPrima;
+public class Experimento {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
 }

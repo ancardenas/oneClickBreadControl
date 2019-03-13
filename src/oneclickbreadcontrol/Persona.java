@@ -5,11 +5,13 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Andres
  */
-public class Persona {
+public class Persona implements Serializable{
     
     protected String nombre;
     protected String ID;

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package oneclickbreadcontrol;
-
+import  static oneclickbreadcontrol.OneClickbreadControl.jefe;
 /**
  *
  * @author Horacio
@@ -14,9 +14,9 @@ public class venIngresar extends javax.swing.JFrame {
     /**
      * Creates new form venIngresar
      */
-    public venIngresar(Jefe jefe) {
+    public venIngresar() {
         initComponents();
-        this.jefe=jefe;
+        
     }
 
     /**
@@ -58,7 +58,7 @@ public class venIngresar extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\bread (1).png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Juan-Jesus\\OneDrive\\Desktop\\Proyecto APICOLA\\apicultura\\oneClickBreadControl\\src\\oneclickbreadcontrol\\Images\\pan64.png")); // NOI18N
         jLabel3.setText("Chioma Bakery");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -100,7 +100,7 @@ public class venIngresar extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistrarse)
                     .addComponent(btnIniciar))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         pack();
@@ -133,7 +133,7 @@ public class venIngresar extends javax.swing.JFrame {
 
 
     
-    private Jefe jefe;
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIniciar;
     private javax.swing.JButton btnRegistrarse;

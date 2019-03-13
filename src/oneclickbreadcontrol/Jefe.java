@@ -9,7 +9,7 @@ import java.io.Serializable;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-
+import static oneclickbreadcontrol.OneClickbreadControl.gestion;
 /**
  *
  * @author Andres
@@ -18,17 +18,15 @@ public class Jefe extends Persona implements Serializable{
    
    private Panaderia ChiomaBakery;
    private String codigoseguriadad; 
-   private GestionDeArchivos gestion;
+   
   
-   public Jefe(String nombre, String ID, String ususario, String contrasena) {
-        super(nombre, ID, ususario, contrasena);
-    }
+   
 
-    public Jefe(Panaderia ChiomaBakery, String codigoseguriadad, GestionDeArchivos gestion, String nombre, String ID, String ususario, String contrasena) {
+    public Jefe(Panaderia ChiomaBakery, String codigoseguriadad, String nombre, String ID, String ususario, String contrasena) {
         super(nombre, ID, ususario, contrasena);
         this.ChiomaBakery = ChiomaBakery;
         this.codigoseguriadad = codigoseguriadad;
-        this.gestion = gestion;
+        
     }
   
      
@@ -49,13 +47,7 @@ public class Jefe extends Persona implements Serializable{
         this.codigoseguriadad = codigoseguriadad;
     }
 
-    public GestionDeArchivos getGestion() {
-        return gestion;
-    }
-
-    public void setGestion(GestionDeArchivos gestion) {
-        this.gestion = gestion;
-    }
+    
    
    
    
@@ -65,7 +57,7 @@ public class Jefe extends Persona implements Serializable{
      
         try{// se hace la excepcion por si alguno de los de las operaciones da un error
              if (codigoseguridad) {  //se le añadira un codigo de segurar para que cualquier empleado no crree una cuenta
-             Empleado empleado=new Empleado(nombre,cedula,username,contrasena);// crea un empleado y los mete en la lista que esta en la panaderia
+             Empleado empleado=new Empleado(0,nombre,cedula,username,contrasena);// crea un empleado y los mete en la lista que esta en la panaderia
              this.ChiomaBakery.getEmpleados().add(empleado);
              gestion.guardartodo(this);//guarda el empeado en el archivo de texto
         }else{

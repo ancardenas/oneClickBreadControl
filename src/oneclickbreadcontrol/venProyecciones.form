@@ -9,7 +9,7 @@
     <Property name="resizable" type="boolean" value="true"/>
     <Property name="title" type="java.lang.String" value="Proyecciones"/>
     <Property name="frameIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-      <Image iconType="2" name="C:\Users\Andres\Documents\NetBeansProjects\oneClickbreadControl\Images\Proyecciones24.png"/>
+      <Image iconType="3" name="/oneclickbreadcontrol/Images/Proyecciones24.png"/>
     </Property>
     <Property name="icon" type="boolean" value="true"/>
   </Properties>

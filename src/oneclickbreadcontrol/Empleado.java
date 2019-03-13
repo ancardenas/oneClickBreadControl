@@ -15,9 +15,7 @@ public class Empleado extends Persona implements Serializable{
     
    private int salario;
 
-    public Empleado(String nombre, String ID, String ususario, String contrasena) {
-        super(nombre, ID, ususario, contrasena);
-    }
+    
 
     public Empleado(int salario, String nombre, String ID, String ususario, String contrasena) {
         super(nombre, ID, ususario, contrasena);

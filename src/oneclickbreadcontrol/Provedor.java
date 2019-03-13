@@ -5,11 +5,13 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Andres
  */
-public class Provedor {
+public class Provedor implements Serializable{
     private String nombre;
     private int telefono;
     private MatPrima matPrima;

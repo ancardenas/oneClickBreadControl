@@ -5,13 +5,14 @@
  */
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Andres
  */
-public class ProductoParaVender extends Producto{
+public class ProductoParaVender extends Producto implements Serializable{
     
     private ArrayList<MatPrima> matprima;
 

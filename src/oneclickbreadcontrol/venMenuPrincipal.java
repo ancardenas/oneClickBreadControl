@@ -12,6 +12,8 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import static oneclickbreadcontrol.OneClickbreadControl.gestion;
+import static oneclickbreadcontrol.OneClickbreadControl.jefe;
 
 /**
  *
@@ -60,7 +62,6 @@ public class venMenuPrincipal extends javax.swing.JFrame {
         InfMen1 = new javax.swing.JMenu();
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\bread (1).png")); // NOI18N
         jLabel3.setText("Chioma Bakery");
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
@@ -130,12 +131,15 @@ public class venMenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MenuPrincipal");
         setExtendedState(6);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\pan64.png")); // NOI18N
         jLabel4.setText("Chioma Bakery");
 
-        Label.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Persona.png")); // NOI18N
         Label.setText("Propietario");
 
         javax.swing.GroupLayout DesktopLayout = new javax.swing.GroupLayout(Desktop);
@@ -149,7 +153,6 @@ public class venMenuPrincipal extends javax.swing.JFrame {
             .addGap(0, 833, Short.MAX_VALUE)
         );
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Logout32.png")); // NOI18N
         jButton1.setText("Cerrar sesion");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,8 +162,8 @@ public class venMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        InvMen1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Inv64.png")); // NOI18N
         InvMen1.setText("Inventario");
+        InvMen1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         InvMen1.addMenuListener(new javax.swing.event.MenuListener() {
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
@@ -181,16 +184,14 @@ public class venMenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        Historia.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Hisotria24.png")); // NOI18N
         Historia.setText("Historia");
         InvMen1.add(Historia);
 
         jMenuBar2.add(InvMen1);
 
-        Caja1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Caja64.png")); // NOI18N
         Caja1.setText("Caja");
+        Caja1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        CajDia1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\MesDia.png")); // NOI18N
         CajDia1.setText("Diaria");
         CajDia1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -199,7 +200,6 @@ public class venMenuPrincipal extends javax.swing.JFrame {
         });
         Caja1.add(CajDia1);
 
-        CajMensual1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\MesDia.png")); // NOI18N
         CajMensual1.setText("Mensual");
         CajMensual1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -210,8 +210,8 @@ public class venMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar2.add(Caja1);
 
-        ProvMen1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Proveedores64.png")); // NOI18N
         ProvMen1.setText("Proveedores");
+        ProvMen1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ProvMen1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProvMen1MouseClicked(evt);
@@ -219,8 +219,8 @@ public class venMenuPrincipal extends javax.swing.JFrame {
         });
         jMenuBar2.add(ProvMen1);
 
-        ProyMen1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Proyecciones64.png")); // NOI18N
         ProyMen1.setText("Proyecciones");
+        ProyMen1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         ProyMen1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ProyMen1MouseClicked(evt);
@@ -228,7 +228,6 @@ public class venMenuPrincipal extends javax.swing.JFrame {
         });
         jMenuBar2.add(ProyMen1);
 
-        InfMen1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Andres\\Documents\\NetBeansProjects\\oneClickbreadControl\\Images\\Inf64.png")); // NOI18N
         InfMen1.setText("Informacion G");
         InfMen1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         InfMen1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -261,12 +260,12 @@ public class venMenuPrincipal extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Label, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                    .addComponent(Label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Desktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 53, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -335,55 +334,21 @@ public class venMenuPrincipal extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        GestionDeArchivos gestion;
-        try {
-            gestion = new GestionDeArchivos();
-            Panaderia panaderia=new Panaderia("ChiomaBakery","bogota",311670);
-        Jefe jefe=new Jefe(panaderia,"velentine",gestion,"desarrolladores","1520","deserrolladores","1520");
-        venIngresar ing = new venIngresar(jefe);
+        gestion.guardartodo(jefe);
+        venIngresar ing = new venIngresar();
         ing.show();
         this.dispose();
-            
-        } catch (IOException ex) {
-            Logger.getLogger(venMenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+       gestion.guardartodo(jefe); // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(venMenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(venMenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(venMenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(venMenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new venMenuPrincipal().setVisible(true);
-            }
-        });
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu CajDia1;

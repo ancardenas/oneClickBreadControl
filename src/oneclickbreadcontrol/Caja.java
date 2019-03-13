@@ -1,12 +1,13 @@
 package oneclickbreadcontrol;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Andres
  */
-public class Caja {
+public class Caja implements Serializable {
 private double dinero;
 private int dia;
 private int mes;
