@@ -44,6 +44,7 @@ public class venVentas extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Cantidad");
 
+        cantidad.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
         cantidad.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
